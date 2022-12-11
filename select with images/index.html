@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap-select Examples</title>
+    <meta name="author" content="Tom Doan">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <style>
+        body {
+            margin: 2em;
+        }
+        
+        pre {
+            margin: 1em 0;
+        }
+        
+        select.selectpicker {
+            display: block;
+            /* Prevent FOUC */
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <h2>Select with Thumbnails</h2>
+        <select title="Select your surfboard" class="selectpicker">
+            <option>Select...</option>
+            <option data-thumbnail="images/icon-chrome.png">Chrome</option>
+            <option data-thumbnail="images/icon-firefox.png">Firefox</option>
+            <option data-thumbnail="images/icon-ie.png">IE</option>
+            <option data-thumbnail="images/icon-opera.png">Opera</option>
+            <option data-thumbnail="images/icon-safari.png">Safari</option>
+        </select>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initiate with custom caret icon
+            $('select.selectpicker').selectpicker({
+                caretIcon: 'glyphicon glyphicon-menu-down'
+            });
+        });
+    </script>
+</body>
+
+</html>
